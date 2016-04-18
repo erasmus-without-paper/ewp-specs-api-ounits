@@ -41,7 +41,7 @@ ask for information on *multiple departments*, but all of these must be within
 
 ### `department_id` (repeatable, required)
 
-A list of department identifiers.
+A list of department identifiers (max 500 items).
 
 This parameter is *repeatable*, so the request MAY contain multiple occurrences
 of it. The server is REQUIRED to process all of them.
@@ -68,6 +68,10 @@ Handling of invalid parameters
    a valid (HTTP 200) XML response in such cases, but the response will simply
    not contain the information on the unknown `department_id` values. (If all
    values are unknown, servers MUST respond with an empty envelope.)
+
+ * If the length of `department_id` list is greater than 500, servers MAY
+   respond with HTTP 400. Clients SHOULD split such large requests into a
+   couple of smaller ones.
 
 
 Response
