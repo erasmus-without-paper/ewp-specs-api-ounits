@@ -26,24 +26,14 @@
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="department" minOccurs="0" maxOccurs="unbounded" type="WRTODO">
+                <xs:element name="department" minOccurs="0" maxOccurs="unbounded" type="TODO">
                     <!--
                     Attributes:
                     - id
 
                     Elements:
-                    - name (1..*, multilang)
-                    - website (0..*)
-                      - xml:lang
-                      - type (one of them should be IRO)
-                      - title
-                    - address (0..1)
-                    - phone numbers (0..*, generic, non-IRO related)
-                    - fax numbers (0..*, generic, non-IRO related)
-                    - email(s) (0..*, generic, non-IRO related)
-                    - image URLs (0..*)
-                      - type: logo (recommended), cover, other
-                     -->
+                    ...
+                    -->
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
