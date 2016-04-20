@@ -3,18 +3,12 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:xml="http://www.w3.org/XML/1998/namespace"
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    xmlns:discovery="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v2"
     elementFormDefault="qualified"
 
     targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-api-departments/blob/master/manifest-entry.xsd"
     xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-departments/blob/master/manifest-entry.xsd"
 >
     <!-- WRTODO: Replace all occurrences of 'master' (in all projects) with 'stable-v1' upon release. -->
-
-    <xs:import
-        schemaLocation="https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-discovery/stable-v2/manifest.xsd"
-        namespace="https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v2"
-    />
 
     <xs:import
         schemaLocation="https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd"
@@ -41,7 +35,7 @@
         </xs:annotation>
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="discovery:ApiEntry">
+                <xs:extension base="ewp:ManifestApiEntryBase">
                     <xs:sequence>
                         <xs:element name="url" type="ewp:HTTPS">
                             <xs:annotation>
@@ -55,4 +49,5 @@
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
+
 </xs:schema>
