@@ -53,14 +53,19 @@ Clients may retrieve valid department identifiers from other APIs, e.g. the
 Permissions
 -----------
 
-All requests from the EWP Network MUST be allowed access to this API. Consult
-the [Echo API][echo] specs for details on handling unprivileged requests.
+ * All requests from the EWP Network MUST be allowed access to this API.
+
+ * Additionally, it is RECOMMENDED to allow this API to be accessed by
+   **anonymous** external clients too (without the need of using a client
+   certificate). It is also RECOMMENDED that servers should include an
+   `Access-Control-Allow-Origin: *` header in their responses (so that
+   JavaScript applications will be able to use it without a proxy).
 
 
 Handling of invalid parameters
 ------------------------------
 
- * General [error handling rules][error-handling] apply. 
+ * General [error handling rules][error-handling] apply.
 
  * Invalid (uncovered) `hei_id` values SHOULD result in an HTTP 400 error.
 
