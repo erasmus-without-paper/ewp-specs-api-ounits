@@ -10,8 +10,8 @@ Summary
 
 This document describes the **Departments API**. Once implemented by the host,
 it allows external clients to retrieve general information on selected
-departments covered by this host. It includes similar "generic" information as
-[Institutions API][institutions-api] does, but on the department level.
+departments covered by this host. It responds with similar type of information
+as [Institutions API][institutions-api] does, but on the department level.
 
 
 Request method
