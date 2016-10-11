@@ -13,26 +13,32 @@
         to Institutions API (or even Registry API), so there's no need for developers
         to include them here once again).
         -->
-        <id type="uri">
-            <!-- Kai's comment: Should probably be mandatory -->
-            <institution-id>uio.no</institution-id>
+        <!--
+        Kais comment:
+        1. Yes, I have changed is as for Institutions.
+        2. Yes, I have removed leading institution-id from IDs.
+        -->
+        <id>
+            <!-- Kai's comment: Mandatory -->
             <organization-unit-id>fsat.no</organization-unit-id>
         </id>
-        <id type="local">
+        <other-id type="local">
             <!-- Kai's comment: Optional -->
-            <institution-id>UIO</institution-id>
             <organization-unit-id>FSAT</organization-unit-id>
-        </id>
+        </other-id>
         <name lang="no">Felles studieadministrativt tjenestesenter</name>
         <!--
         Wojtek's comment: Same issues as described in the Institutions API.
         -->
-        <address type="postal">
+        <!--
+        Kais comment: Same reply/changes as in the Institutions API.
+        -->
+        <address type="postOfficeBoxAddress">
             <box>Boks 1086</box>
             <city>Oslo</city>
             <post-code>0316</post-code>
         </address>
-        <address type="visiting">
+        <address type="streetAddress">
             <street>Fridtjof Nansens vei 17/19</street>
             <city>Oslo</city>
             <post-code>0369</post-code>
@@ -41,12 +47,41 @@
         <!--
         Wojtek's comment: Same issues as described in the Institutions API.
         -->
+        <!--
+        Kais comment: Same reply/changes as in the Institutions API.
+        I think it should contain the same elements as the Institutions API, except for
+        the hierarchy/connection between Org Unit and Institution (since Institution
+        conceptually is the top level Org Unit). I suggest we wait to finish populating this
+        API until the Institutions API is finished.
+        -->
+        <phone type="housing">23456789</phone>
+        <fax type="housing">98765432</fax>
+        <email type="housing">innkvartering@fsat.no</email>
+        <email type="visa">visum@fsat.no</email>
+        <euc-no>23456</euc-no>
+        <url lang="en" type="iro">http://www.fsat.no/iro/en</url>
         <url lang="no" type="administrative">http://www.fsat.no</url>
         <url lang="en" type="administrative">http://www.fsat.no/en</url>
         <url lang="no" type="course-catalogue">http://www.fsat.no/kurs</url>
         <description lang="en">Blah blah</description>
         <description lang="no">Bla bla</description>
-        <!-- Can a department participate in EWP without using ECTS? -->
+        <academic-terms>
+            <academic-term>
+                <year>2016</year>
+                <term xml:lang="en-us">Fall</term>
+                <term xml:lang="no">Høst</term>
+                <start-date>2016-07-01</start-date>
+                <end-date>2016-12-31</end-date>
+            </academic-term>
+            <academic-term>
+                <year>2016</year>
+                <term xml:lang="en-us">Spring</term>
+                <term xml:lang="no">Vår</term>
+                <start-date>2017-01-01</start-date>
+                <end-date>2017-06-30</end-date>
+            </academic-term>
+        </academic-terms>
+        <!-- Kais comment: Can a department participate in EWP without using ECTS? -->
         <use-ects>true</use-ects>
     </organization-unit>
 </response>
