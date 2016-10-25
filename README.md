@@ -89,6 +89,16 @@ Servers MUST respond with a valid XML document described by the [response.xsd]
 (response.xsd) schema. See the schema annotations for further information.
 
 
+Data model entities involved in the response
+--------------------------------------------
+
+ * Inst/Org Unit
+ * Coordinator
+ * Person
+ * Academic Year?
+ * Academic Term
+
+
 [develhub]: http://developers.erasmuswithoutpaper.eu/
 [statuses]: https://github.com/erasmus-without-paper/ewp-specs-management#statuses
 [registry-spec]: https://github.com/erasmus-without-paper/ewp-specs-api-registry
