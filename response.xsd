@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema elementFormDefault="qualified" targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-api-departments/tree/master" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-departments/tree/master" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema elementFormDefault="qualified" targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-api-ounits/tree/master" xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-departments/tree/master" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <!-- WRTODO: Replace all occurrences of 'master' (in all projects) with 'stable-v1' upon release. -->
     <xs:annotation>
         <xs:documentation>This schema is a part of the Erasmus Without Paper project. Before you start
@@ -7,9 +7,9 @@
 
             http://developers.erasmuswithoutpaper.eu/</xs:documentation>
     </xs:annotation>
-    <xs:element name="response">
+    <xs:element name="ounits-response">
         <xs:annotation>
-            <xs:documentation>This describes the format of the response returned by the EWP Departments API.</xs:documentation>
+            <xs:documentation>This describes the format of the response returned by the EWP Organizational Units API.</xs:documentation>
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
