@@ -95,9 +95,9 @@ Data model entities involved in the response
 
  * Inst/Org Unit
  * Coordinator
+ * HEI Contact Info
  * Person
- * Academic Year?
- * Academic Term
+ * Person Contact Info
 
 
 [develhub]: http://developers.erasmuswithoutpaper.eu/
