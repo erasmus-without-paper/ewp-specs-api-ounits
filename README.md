@@ -97,7 +97,6 @@ Data model entities involved in the response
  * Coordinator
  * HEI Contact Info
  * Person
- * Person Contact Info
 
 
 [develhub]: http://developers.erasmuswithoutpaper.eu/
