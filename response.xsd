@@ -130,6 +130,22 @@
                                     </xs:documentation>
                                 </xs:annotation>
                             </xs:element>
+                            <xs:element name="mobility-factsheet-url" minOccurs="0" maxOccurs="unbounded" type="ewp:HTTPWithOptionalLang">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        This is similar to the `mobility-factsheet-url` element in the Institutions API,
+                                        but - if present - it should contain a version of mobility factsheet related to
+                                        this particular Organizational Unit only.
+
+                                        As was the case in the Institutions API, it SHOULD refer to either a PDF file,
+                                        or a HTML website, or both (via two separate factsheet-url elements). Other
+                                        formats are also permitted, but discouraged.
+
+                                        Elements SHOULD have an xml:lang attribute, and at least one URL should refer
+                                        to a factsheet written in English.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
                             <xs:element ref="c:contact" minOccurs="0" maxOccurs="unbounded">
                                 <xs:annotation>
                                     <xs:documentation>
