@@ -10,9 +10,21 @@ Summary
 
 This document describes the **Organizational Units API**. Once implemented by
 the host, it allows external clients to retrieve general information on
-selected organizational units (faculties, departments, divisions, etc.) covered
-by this host. It responds with similar type of information as [Institutions
-API][institutions-api] does, but on a lower level.
+selected organizational units (faculties, departments, divisions, etc.)
+**either covered, or otherwise known** by this host. It responds with similar
+type of information as [Institutions API][institutions-api] does, but on a
+lower level.
+
+
+"Covered" vs "known"
+--------------------
+
+Please read [this chapter in the Intitutions API]
+(https://github.com/erasmus-without-paper/ewp-specs-api-institutions#known-heis).
+The concept of *known organizational units* is exactly the same as the concept
+of *known institutions*. Server implementers MUST provide some basic
+information on known external organizational units, **if it refers to them** in
+other APIs.
 
 
 Request method
@@ -71,7 +83,7 @@ Handling of invalid parameters
 
  * General [error handling rules][error-handling] apply.
 
- * Invalid (uncovered) `hei_id` values SHOULD result in an HTTP 400 error.
+ * Invalid (unknown) `hei_id` values SHOULD result in an HTTP 400 error.
 
  * Invalid `ounit_id` values MUST be **ignored**. Servers MUST return
    a valid (HTTP 200) XML response in such cases, and the response should
