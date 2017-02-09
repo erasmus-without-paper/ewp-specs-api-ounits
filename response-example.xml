@@ -20,6 +20,7 @@
     -->
     <ounit>
         <ounit-id>73</ounit-id> <!-- We recommend UUIDs though. -->
+        <ounit-code>10000000</ounit-code>
         <name xml:lang="en">Faculty of Mathematics, Informatics, and Mechanics</name>
         <name xml:lang="pl">Wydział Matematyki, Informatyki i Mechaniki</name>
         <parent-ounit-id>5</parent-ounit-id>
