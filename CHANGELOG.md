@@ -5,6 +5,29 @@ This document describes all the changes made to the *Organizational Units API*
 document, starting from its first beta draft version.
 
 
+0.4.0
+-----
+
+* The server is now REQUIRED to provide `<ounit-code>` element
+  (`minOccurs="1"`).
+
+* New `ounit_code` parameter was added to allow requesters searching for units
+  by their codes (the server is now REQUIRED to support this parameter).
+  Providing `ounit_id` parameter is no longer required, if the requester
+  provides the `ounit_code` parameter. This is a part of a larger change in all
+  APIs described [here]
+  (https://github.com/erasmus-without-paper/general-issues/issues/21).
+
+* An optional `<abbreviation>` element wad added. See [this thread]
+  (https://github.com/erasmus-without-paper/ewp-specs-api-institutions/issues/10).
+
+* Specified that servers are allowed to "hide" units which they believe EWP
+  doesn't need to see, but if they do, they need to do this consistently. See
+  [this thread](https://github.com/erasmus-without-paper/general-issues/issues/20).
+
+* Specified how server should respond when "required" parameters are missing.
+
+
 0.3.0
 -----
 
