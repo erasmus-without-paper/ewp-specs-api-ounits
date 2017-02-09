@@ -101,6 +101,8 @@ Handling of invalid parameters
    length of `ounit_code` list is greater than `<max-ounit-codes>`), then the
    server MUST respond with HTTP 400.
 
+ * If both lists are empty, then the server SHOULD respond with HTTP 400.
+
 
 Response
 --------
