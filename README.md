@@ -53,19 +53,19 @@ within **a single institution**. This parameter takes the the ID of this
 institution.
 
 
-### `ounit_id` (repeatable, required)
+### `ounit_id` or `ounit_code` (repeatable, required)
 
-A list of unit IDs (no more than `<max-ounit-ids>` items).
+A list of unit IDs OR unit codes (no more than `<max-ounit-ids>` or
+`<max-ounit-codes>` items, respectively). The requester MUST provide either a
+list of `ounit_id` values, or a list of `ounit_code` values, **but not both**.
 
 This parameter is *repeatable*, so the request MAY contain multiple occurrences
 of it. The server is REQUIRED to process all of them.
 
-Server implementers provide their own chosen value of `<max-ounit-ids>`
-via their manifest entry (see [manifest-entry.xsd](manifest-entry.xsd)).
-Clients SHOULD parse this value (or assume it's equal to `1`).
-
-Clients retrieve `ounit_id` values from other APIs, e.g. the [Institutions
-API][institutions-api]. Servers MUST **ignore** invalid identifiers.
+Server implementers provide their own chosen values of `<max-ounit-ids>` and
+`<max-ounit-codes>` via their manifest entry (see [manifest-entry.xsd]
+(manifest-entry.xsd)). Clients SHOULD parse this value (or assume it's equal to
+`1`).
 
 
 Permissions
@@ -88,16 +88,18 @@ Handling of invalid parameters
 
  * General [error handling rules][error-handling] apply.
 
- * Invalid (unknown) `hei_id` values SHOULD result in an HTTP 400 error.
+ * Invalid (or unknown) `hei_id` values SHOULD result in an HTTP 400 error.
 
- * Invalid `ounit_id` values MUST be **ignored**. Servers MUST return
-   a valid (HTTP 200) XML response in such cases, and the response should
-   simply not contain the information on the unknown `ounit_id` values.
+ * Invalid (or unknown) `ounit_id` and `ounit_code` values MUST be **ignored**.
+   Servers MUST return a valid (HTTP 200) XML response in such cases, and the
+   response should simply not contain any information on these missing entities.
    If all values are unknown, servers MUST respond with an empty `<response>`
-   element. This requirement is true even when `<max-ounit-ids>` is `1`.
+   element. This requirement is true even when both `<max-ounit-ids>` and
+   `<max-ounit-codes>` is set to `1`.
 
- * If the length of `ounit_id` list is greater than
-   `<max-ounit-ids>`, servers MUST respond with HTTP 400.
+ * If the length of `ounit_id` list is greater than `<max-ounit-ids>` (or the
+   length of `ounit_code` list is greater than `<max-ounit-codes>`), then the
+   server MUST respond with HTTP 400.
 
 
 Response

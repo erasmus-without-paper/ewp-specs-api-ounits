@@ -56,8 +56,8 @@
                         <xs:documentation>
                             This represents a single organizational unit (this can be faculty, department,
                             division, or the whole "root" institution). Servers will produce one such
-                            element for each of the `ounit_id` values passed in the Organizational Units
-                            API call.
+                            element for each of the `ounit_id` or `ounit_code` values passed in the
+                            Organizational Units API call.
 
                             Note that it is NOT required to expose units as a tree-like structure, and it
                             is NOT required for a root unit to exist. Clients MUST be able to handle both
@@ -76,9 +76,8 @@
                             <xs:element name="ounit-id" type="xs:string" minOccurs="1" maxOccurs="1">
                                 <xs:annotation>
                                     <xs:documentation>
-                                        Unique identifier of this organizational unit. Will always match one of the
-                                        `ounit_id` values passed in the Organization Units API call. It SHOULD NOT be
-                                        displayed to the user (use `ounit-code` for that).
+                                        Unique identifier of this organizational unit. It SHOULD NOT be displayed to
+                                        the user (use `ounit-code` for that).
 
                                         Server implementers SHOULD use immutable surrogate keys for their work with EWP
                                         (we recommend choosing UUID surrogate keys). Avoid using natural/business keys!
