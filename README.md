@@ -73,9 +73,14 @@ Permissions
 
  * All requests from the EWP Network MUST be allowed to access this API.
 
- * Additionally, implementers MAY allow this API to be accessed by
+ * Additionally, server implementers MAY allow this API to be accessed by
    **anonymous** external clients too (without the need of using any client
    certificate).
+
+ * Server implementers MAY choose to hide some of their organizational units
+   from EWP members. But if they do, they MUST keep proper referential
+   integrity in mind (if a unit is referenced somewhere in other APIs, then it
+   MUST be visible here).
 
 
 Handling of invalid parameters
