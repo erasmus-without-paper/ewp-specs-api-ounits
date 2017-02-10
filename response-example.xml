@@ -39,6 +39,8 @@
         <website-url xml:lang="en">http://www.mimuw.edu.pl/?LANG=en</website-url>
         <c:contact>
             <c:contact-name>John Doe (Faculty's Mobility Coordinator)</c:contact-name>
+            <c:person-given-names>John</c:person-given-names>
+            <c:person-family-name>Doe</c:person-family-name>
             <p:phone-number>
                 <p:e164>+4723456789</p:e164>
             </p:phone-number>
