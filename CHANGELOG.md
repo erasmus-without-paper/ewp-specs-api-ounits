@@ -5,6 +5,13 @@ This document describes all the changes made to the *Organizational Units API*
 document, starting from its first beta draft version.
 
 
+0.4.1
+-----
+
+* Modified the `<contact>` elements in examples to fit recent additions to the
+  [Abstract Contact Type](https://github.com/erasmus-without-paper/ewp-specs-types-contact).
+
+
 0.4.0
 -----
 
