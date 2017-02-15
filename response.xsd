@@ -73,19 +73,14 @@
                     </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="ounit-id" type="xs:string" minOccurs="1" maxOccurs="1">
+                            <xs:element name="ounit-id" type="ewp:AsciiPrintableIdentifier" minOccurs="1" maxOccurs="1">
                                 <xs:annotation>
                                     <xs:documentation>
                                         Unique identifier of this organizational unit. It SHOULD NOT be displayed to
                                         the user (use `ounit-code` for that).
 
-                                        Server implementers SHOULD use immutable surrogate keys for their work with EWP
-                                        (we recommend choosing UUID surrogate keys). Avoid using natural/business keys!
-
-                                        Related links:
-                                        https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/issues/9
-                                        https://en.wikipedia.org/wiki/Surrogate_key
-                                        https://en.wikipedia.org/wiki/Natural_key
+                                        Server implementers MUST use immutable surrogate keys for their work with EWP.
+                                        https://github.com/erasmus-without-paper/ewp-specs-architecture#ids
                                     </xs:documentation>
                                 </xs:annotation>
                             </xs:element>
@@ -99,9 +94,7 @@
                                         searching, but they are *not used* to identify entities in EWP network.
 
                                         Related links:
-                                        https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/issues/9
-                                        https://en.wikipedia.org/wiki/Surrogate_key
-                                        https://en.wikipedia.org/wiki/Natural_key
+                                        https://github.com/erasmus-without-paper/ewp-specs-architecture#ids
                                     </xs:documentation>
                                 </xs:annotation>
                             </xs:element>
@@ -130,7 +123,7 @@
                                     </xs:documentation>
                                 </xs:annotation>
                             </xs:element>
-                            <xs:element name="parent-ounit-id" minOccurs="0" maxOccurs="1" type="xs:string">
+                            <xs:element name="parent-ounit-id" minOccurs="0" maxOccurs="1" type="ewp:AsciiPrintableIdentifier">
                                 <xs:annotation>
                                     <xs:documentation>
                                         Optional parent unit ID.
