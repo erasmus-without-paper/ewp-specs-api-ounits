@@ -19,8 +19,8 @@ lower level.
 "Covered" vs "known"
 --------------------
 
-Please read [this chapter in the Intitutions API]
-(https://github.com/erasmus-without-paper/ewp-specs-api-institutions#known-heis).
+Please read [this chapter in the Intitutions
+API](https://github.com/erasmus-without-paper/ewp-specs-api-institutions#known-heis).
 The concept of *known organizational units* is exactly the same as the concept
 of *known institutions*. Server implementers MUST provide some basic
 information on known external organizational units, **if it refers to them** in
@@ -63,9 +63,9 @@ This parameter is *repeatable*, so the request MAY contain multiple occurrences
 of it. The server is REQUIRED to process all of them.
 
 Server implementers provide their own chosen values of `<max-ounit-ids>` and
-`<max-ounit-codes>` via their manifest entry (see [manifest-entry.xsd]
-(manifest-entry.xsd)). Clients SHOULD parse this value (or assume it's equal to
-`1`).
+`<max-ounit-codes>` via their manifest entry (see
+[manifest-entry.xsd](manifest-entry.xsd)). Clients SHOULD parse this value (or
+assume it's equal to `1`).
 
 
 Permissions
@@ -107,8 +107,8 @@ Handling of invalid parameters
 Response
 --------
 
-Servers MUST respond with a valid XML document described by the [response.xsd]
-(response.xsd) schema. See the schema annotations for further information.
+Servers MUST respond with a valid XML document described by the
+[response.xsd](response.xsd) schema. See the schema annotations for further information.
 
 
 Data model entities involved in the response
