@@ -5,6 +5,12 @@ This document describes all the changes made to the *Organizational Units API*
 document, starting from its first beta draft version.
 
 
+1.1.0
+-----
+
+* Added an optional field for the logo of the unit.
+
+
 1.0.0
 -----
 
