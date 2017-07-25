@@ -68,19 +68,16 @@ Server implementers provide their own chosen values of `<max-ounit-ids>` and
 assume it's equal to `1`).
 
 
-Permissions
------------
+Security and permissions
+------------------------
 
- * All requests from the EWP Network MUST be allowed to access this API.
+For all endpoints of this API, implementers MUST follow the rules described in
+[EWP Authentication and Security, Version 1][sec-v1] document.
 
- * Additionally, server implementers MAY allow this API to be accessed by
-   **anonymous** external clients too (without the need of using any client
-   certificate).
-
- * Server implementers MAY choose to hide some of their organizational units
-   from EWP members. But if they do, they MUST keep proper referential
-   integrity in mind (if a unit is referenced somewhere in other APIs, then it
-   MUST be visible here).
+Server implementers MAY choose to hide some of their organizational units from
+EWP members. But if they do, they MUST keep proper referential integrity in
+mind (if a unit is referenced somewhere in other APIs, then it MUST be visible
+here).
 
 
 Handling of invalid parameters
@@ -127,3 +124,4 @@ Data model entities involved in the response
 [echo]: https://github.com/erasmus-without-paper/ewp-specs-api-echo
 [error-handling]: https://github.com/erasmus-without-paper/ewp-specs-architecture#error-handling
 [institutions-api]: https://github.com/erasmus-without-paper/ewp-specs-api-institutions
+[sec-v1]: https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v1
