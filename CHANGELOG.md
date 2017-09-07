@@ -128,7 +128,7 @@ This is the first official stable version, accepted by all the partners
 
 * New `<ounit-code>` elements were added to allow separation of surrogate and
   natural/business keys. See
-  [this thread](https://github.com/erasmus-without-paper/ewp-specs-api-mobilities/issues/9#issuecomment-271387634).
+  [this thread](https://github.com/erasmus-without-paper/ewp-specs-api-omobilities/issues/9#issuecomment-271387634).
 
 * Up to now, Organizational Units API described only the units of HEIs
   *covered* by the host. Now, servers are REQUIRED to also describe units of
