@@ -22,9 +22,9 @@ lower level.
 Please read [this chapter in the Intitutions
 API](https://github.com/erasmus-without-paper/ewp-specs-api-institutions#known-heis).
 The concept of *known organizational units* is exactly the same as the concept
-of *known institutions*. Server implementers MUST provide some basic
-information on known external organizational units, **if it refers to them** in
-other APIs.
+of *known institutions*. Is it RECOMMENDED for server implementers to provide
+some basic information on known external organizational units, **if they refers
+to them** in other APIs.
 
 
 Request method
