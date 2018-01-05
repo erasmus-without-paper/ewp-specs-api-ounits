@@ -5,6 +5,14 @@ This document describes all the changes made to the *Organizational Units API*
 document, starting from its first beta draft version.
 
 
+2.1.0
+-----
+
+* Publishing data on external units is now only "recommended" (previously it
+  was "required").
+* Fixed obsolete links.
+
+
 2.0.0
 -----
 
