@@ -54,8 +54,8 @@
                         <xs:documentation>
                             This represents a single organizational unit (this can be faculty, department,
                             division, or the whole "root" institution). Servers will produce one such
-                            element for each of the `ounit_id` or `ounit_code` values passed in the
-                            Organizational Units API call.
+                            element for each existing organizational unit matching any of the `ounit_id`
+                            or `ounit_code` values passed in the Organizational Units API call.
 
                             Note that it is NOT required to expose units as a tree-like structure, and it
                             is NOT required for a root unit to exist. Clients MUST be able to handle both
