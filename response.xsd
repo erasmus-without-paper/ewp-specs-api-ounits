@@ -127,7 +127,7 @@
                                         Optional parent unit ID.
 
                                         Many computer systems keep units in a tree-like hierarchy. The client is not
-                                        required to display these hierarchy as such, but it can, if it wants to (and if
+                                        required to display this hierarchy as such, but it can, if it wants to (and if
                                         this information is provided by the server implementers).
 
                                         When this feature is served, server implementers SHOULD make sure that all
